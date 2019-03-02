@@ -54,20 +54,17 @@ namespace Hannon.Ldap
         public void AddUser(UserModel user)
         {
             DirectoryEntry ouEntry = new DirectoryEntry("LDAP://CN=Users,DC=Hannon,DC=local");
-            for (int i = 0; i < 10; i++)
+            try
             {
-                try
-                {
-                    DirectoryEntry childEntry = ouEntry.Children.Add("CN=TestUser" + i, "user");
-                    childEntry.CommitChanges();
-                    ouEntry.CommitChanges();
-                    childEntry.Invoke("SetPassword", new object[] { "Password123" });
-                    childEntry.CommitChanges();
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex);
-                }
+                DirectoryEntry childEntry = ouEntry.Children.Add("CN="+ user.UID, "user");
+                childEntry.CommitChanges();
+                ouEntry.CommitChanges();
+                childEntry.Invoke("SetPassword", new object[] { user.UserPassword });
+                childEntry.CommitChanges();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
             }
         }
 
@@ -75,9 +72,7 @@ namespace Hannon.Ldap
         {
             var request = new SearchRequest(baseDn, ldapFilter, SearchScope.Subtree, null);
             var response = (SearchResponse)_connection.SendRequest(request);
-
             var result = new List<Dictionary<string, string>>();
-
             foreach (SearchResultEntry entry in response.Entries)
             {
                 var dic = new Dictionary<string, string>();
@@ -91,10 +86,7 @@ namespace Hannon.Ldap
 
                 result.Add(dic);
             }
-
             return result;
         }
-
-
     }
 }

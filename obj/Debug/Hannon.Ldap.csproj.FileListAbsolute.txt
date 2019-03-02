@@ -1,0 +1,11 @@
+C:\SourceControl\Hannon.Ldap\bin\Debug\Hannon.Ldap.pdb
+C:\SourceControl\Hannon.Ldap\bin\Debug\Newtonsoft.Json.dll
+C:\SourceControl\Hannon.Ldap\bin\Debug\Newtonsoft.Json.pdb
+C:\SourceControl\Hannon.Ldap\bin\Debug\Newtonsoft.Json.xml
+C:\SourceControl\Hannon.Ldap\obj\Debug\Hannon.Ldap.csprojAssemblyReference.cache
+C:\SourceControl\Hannon.Ldap\obj\Debug\Hannon.Ldap.csproj.CoreCompileInputs.cache
+C:\SourceControl\Hannon.Ldap\obj\Debug\Hannon.Ldap.csproj.CopyComplete
+C:\SourceControl\Hannon.Ldap\obj\Debug\Hannon.Ldap.pdb
+C:\SourceControl\Hannon.Ldap\bin\Debug\Hannon.Ldap.exe.config
+C:\SourceControl\Hannon.Ldap\bin\Debug\Hannon.Ldap.exe
+C:\SourceControl\Hannon.Ldap\obj\Debug\Hannon.Ldap.exe

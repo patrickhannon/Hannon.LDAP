@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
-using Hannon.Ldap.Models;
-using Newtonsoft.Json;
-using System.Diagnostics;
+//Create app Settings for LDAP
+<add key="LDAPPassword" value="" />
+<add key="LDAPPath" value="192.168.0.3:389" />
+<add key="LDAPUser" value="Administrator" />
+<add key="LDAPDomain" value="hannon.local " />
 
+//Used Program.cs to run test
 namespace Hannon.Ldap
 {
     class Program
